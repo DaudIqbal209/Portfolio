@@ -15,9 +15,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 </head>
@@ -31,6 +31,10 @@
         padding: 0;
         color: #ffffff;
 
+    }
+    
+    a{
+        text-decoration: none;
     }
 
     h3 {
@@ -96,11 +100,15 @@
     .logo li {
         transform: rotate(-90deg) !important;
         transform-origin: 0 0;
-        padding: 50px;
+        padding: 50px 50px 35px 50px;
         display: flex;
         box-sizing: border-box;
 
 
+    }
+    
+    .logo li a:focus{
+        color: #09F755;
     }
 
     .drop-down {
@@ -578,12 +586,24 @@
         }
 
 
+        .home-content {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+
+        }
+
+
         .logo {
             flex-basis: 8%;
         }
 
         .intro {
             flex-basis: 92%;
+            position: relative;
+            top: 10vh;
+
         }
     }
 
@@ -694,13 +714,13 @@
         .col-3 {
             flex-basis: 50%;
         }
-        
+
         /*     600 px widht for home   */
-        
+
         .about {
             margin-top: 0;
         }
-        
+
 
     }
 
@@ -774,8 +794,8 @@
             flex-basis: 100%;
             margin: 40px 0px 40px 0px;
         }
-        
-        
+
+
 
     }
 
@@ -789,7 +809,7 @@
         .box-1 h1 {
             font-size: 26px;
         }
-        
+
 
 
     }
@@ -846,79 +866,68 @@
         .skills {
             margin: 70px 0 150px 0;
         }
-        
-    
+
+
     }
-    
-    
-     @media only screen and (max-width:600px) {
+
+
+    @media only screen and (max-width:600px) {
 
         .work,
-        .skills , about-1{
-            margin: 20px 0 50px 0;
+        .skills,
+        about-1 {
+            margin: 50px 0 120px 0;
             padding-left: 30px;
         }
-         
-         
-         .timeline{
-             margin-bottom: 100px;
-         }
-         
-         .contact{
-             margin-top: 60px;
-         }
-         
-         .copyright{
-             margin-top: 70px;
-         }
-         
-         
-         .line{
-             font-size: 28px;
-             width: 100%;
-             margin-left: 0;
-             text-align: center;
-             border-bottom: none;
-         }
-        
-         
+
+
+        .timeline {
+            margin-bottom: 120px;
+            margin-left: 30px;
+        }
+
+        .contact {
+            margin-top: 60px;
+        }
+
+        .copyright {
+            margin-top: 70px;
+        }
+
+
+        .line {
+            font-size: 28px;
+            margin-left: 0;
+            text-align: center;
+            border-bottom: 1px solid #fff;
+            margin: auto;
+        }
+
+
     }
-         
-          @media only screen and (max-width:350px) {
+
+    @media only screen and (max-width:350px) {
 
         .work,
-        .skills , about-1{
+        .skills,
+        about-1 {
             padding-left: 10px;
         }
     }
 
-    
-    
-     @media only screen and (max-width:600px) {
-     
-         .timeline{
-             margin-left: 30px;
-         }
-         
+
+
+
+    @media only screen and (max-width:350px) {
+
+        .timeline {
+            margin-left: 20px;
+        }
+
+        .contact-msg {
+            margin-left: 15px;
+        }
     }
-    
-    
-    
-    
-     @media only screen and (max-width:350px) {
-     
-         .timeline{
-             margin-left: 20px;
-         }
-         
-         .contact-msg{
-             margin-left: 15px;
-         }
-    }
-    
-    
-    
-    
 
 </style>
 
@@ -935,7 +944,7 @@
         <div class="home-bg">
 
 
-            <div class="home-content">
+            <div class="home-content" id="home">
 
 
                 <div class="logo">
@@ -947,10 +956,11 @@
 
                     <ul id="menu">
 
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Work</li>
-                        <li>Contact</li>
+                        <li> <a href="#home"> Home </a> </li>
+                        <li> <a href="#about"> About </a> </li>
+                           <li> <a href="#skill"> Skills </a> </li>
+                        <li> <a href="#work"> Work </a> </li>
+                        <li> <a href="#contact"> Contact </a> </li>
 
                     </ul>
 
@@ -999,7 +1009,7 @@
 
 
 
-        <div class="about">
+        <div class="about" id="about">
 
             <h1 class="line line1">About</h1>
 
@@ -1120,52 +1130,52 @@
 
 
         <div class="container">
-            
+
             <div class="timeline">
 
-            <ul>
+                <ul>
 
 
-                <li>
+                    <li>
 
 
-                    <h3>Engineering View</h3>
+                        <h3>Engineering View</h3>
 
-                    <p class=" t-d">First impressions mean everything in business and good website design is the key to exploiting this. In my opinion, a great site is not measured by looks alone, but also by functionality and usability. I am an experienced programmer who can find creative solutions to technical challenges, whilst at the same time designing sleek and visually appealing websites. I have extensive knowledge of recognized technical standards and i'm familiar with modern build practices.</p>
+                        <p class=" t-d">First impressions mean everything in business and good website design is the key to exploiting this. In my opinion, a great site is not measured by looks alone, but also by functionality and usability. I am an experienced programmer who can find creative solutions to technical challenges, whilst at the same time designing sleek and visually appealing websites. I have extensive knowledge of recognized technical standards and i'm familiar with modern build practices.</p>
 
-                </li>
-
-
-
-
-                <li>
-
-
-                    <h3>Product</h3>
-
-                    <p class=" t-d">Usually I'm not the atypical product manager, Hence I'm strongly in depth in research, product design and product co-ordination. that would help the product grow from 0 - 1. My first-rate analytical abilities helps me maintian the product vision from start to finish, both technical and product wise.</p>
-
-                </li>
+                    </li>
 
 
 
 
+                    <li>
 
-                <li>
 
+                        <h3>Product</h3>
 
-                    <h3>Design</h3>
+                        <p class=" t-d">Usually I'm not the atypical product manager, Hence I'm strongly in depth in research, product design and product co-ordination. that would help the product grow from 0 - 1. My first-rate analytical abilities helps me maintian the product vision from start to finish, both technical and product wise.</p>
 
-                    <p class="t-d">I'm not the atypical designer but then i possess good visual abilities and this has helped greatly with my presentation skills which allow me to successfully present design ideas to stakeholders and even design teams. My strong conceptualization ability allows me to picture and then bring to life beautiful work. Finally you'd mostly find me in stylesheets tweaking and creating fluent user experiences.</p>
-
-                </li>
+                    </li>
 
 
 
 
 
+                    <li>
 
-            </ul>
+
+                        <h3>Design</h3>
+
+                        <p class="t-d">I'm not the atypical designer but then i possess good visual abilities and this has helped greatly with my presentation skills which allow me to successfully present design ideas to stakeholders and even design teams. My strong conceptualization ability allows me to picture and then bring to life beautiful work. Finally you'd mostly find me in stylesheets tweaking and creating fluent user experiences.</p>
+
+                    </li>
+
+
+
+
+
+
+                </ul>
 
 
 
@@ -1173,7 +1183,7 @@
 
 
 
-            <h1 class="line">Skills</h1>
+            <h1 class="line" id="skill">Skills</h1>
 
 
 
@@ -1493,7 +1503,7 @@
 
         <div class="container">
 
-            <h1 class="line">Portfolio</h1>
+            <h1 class="line" id="work">Portfolio</h1>
 
 
 
@@ -1703,7 +1713,7 @@
 
 
 
-            <h1 class="line">Contact Me!</h1>
+            <h1 class="line" id="contact">Contact Me!</h1>
 
             <div class="contact">
 
@@ -1712,9 +1722,9 @@
 
                     <form action="https://formspree.io/f/mgerqkrp" method="post">
 
-                        <input type="text" placeholder="Name" name="Name">
-                        <input type="email" placeholder="Email" name="_replyby">
-                        <textarea placeholder="Your Message !" name="message"> </textarea>
+                        <input type="text" placeholder="Name" name="Name" required>
+                        <input type="email" placeholder="Email" name="From" required>
+                        <textarea placeholder="Your Message !" name="Message" required> </textarea>
                         <input type="submit">
 
                     </form>
@@ -1727,15 +1737,15 @@
 
                     <ul>
 
-                        <li> <i class="fab fa-facebook-square"></i> </li>
+                        <li> <a href="https://www.facebook.com/dawood.iqbal.509"><i class="fab fa-facebook-square"></i> </a></li>
 
-                        <li> <i class="fab fa-instagram-square"></i> </li>
+                        <li> <a href="https://www.instagram.com/dawoodiqbal.509/?fbclid=IwAR0guEXQw-n0VwbGg4EXDAJb9lDV4eSiqLOICegCxtrloe5IwXzsWqIcYCc"> <i class="fab fa-instagram-square"></i> </a> </li>
 
-                        <li> <i class="fas fa-envelope-square"></i> </li>
+                        <li> <a href="mailto:dawoodiqbal.528@gmail.com"> <i class="fas fa-envelope-square"></i> </a> </li>
 
                         <li> <i class="fab fa-linkedin"></i> </li>
 
-                        <li> <i class="fab fa-github-square"></i> </li>
+                        <li> <a href="https://github.com/DaudIqbal209"> <i class="fab fa-github-square"></i> </a> </li>
 
 
 
@@ -1815,33 +1825,34 @@
     </script>
 
 
-    
+
     <script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $("a").on('click', function(event) {
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
 
-      // Store hash
-      var hash = this.hash;
+                    // Store hash
+                    var hash = this.hash;
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
-});
-</script>
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+
+    </script>
 
 
 
